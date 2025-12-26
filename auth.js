@@ -1,19 +1,28 @@
 import { loadData } from './storage.js';
 
-function login(password) {
-    const settings = loadData('settings');
-
-    // Eğer settings yoksa varsayılan şifre
-    const correctPassword = settings?.adminPassword || "1234";
-
+/**
+ * Giriş kontrolü
+ * @param {string} password - Kullanıcının girdiği şifre
+ * @returns {boolean} - Doğruysa true
+ */
+function login(password){
+    const settings = loadData('settings'); 
+    const correctPassword = settings?.adminPassword || "1234"; // varsayılan şifre
     return password === correctPassword;
 }
 
-function logout() {
+/**
+ * Çıkış işlemi
+ */
+function logout(){
     localStorage.removeItem('loggedIn');
 }
 
-function isLoggedIn() {
+/**
+ * Oturum kontrolü
+ * @returns {boolean} - Giriş yapılmışsa true
+ */
+function isLoggedIn(){
     return localStorage.getItem('loggedIn') === "true";
 }
 
