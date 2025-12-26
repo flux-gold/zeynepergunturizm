@@ -1,6 +1,6 @@
 import { login } from '../core/auth.js';
 
-function renderLogin(container) {
+function renderLogin(container){
     container.innerHTML = `
         <div id="login-box" style="max-width:300px;margin:auto;padding:20px;border:1px solid #002147;background:#FFFFFF;">
             <h2>Admin Girişi</h2>
@@ -9,9 +9,12 @@ function renderLogin(container) {
         </div>
     `;
 
-    document.getElementById('loginBtn').addEventListener('click', () => {
-        const password = document.getElementById('password').value.trim();
-        if(login(password)){
+    const pwdInput = document.getElementById('password');
+    const loginBtn = document.getElementById('loginBtn');
+
+    loginBtn.addEventListener('click', () => {
+        const pwd = pwdInput.value.trim();
+        if(login(pwd)){
             localStorage.setItem('loggedIn', "true");
             alert("Giriş başarılı");
             window.location.reload();
@@ -21,8 +24,8 @@ function renderLogin(container) {
     });
 
     // Enter tuşu ile giriş
-    document.getElementById('password').addEventListener('keypress', (e) => {
-        if(e.key === 'Enter') document.getElementById('loginBtn').click();
+    pwdInput.addEventListener('keypress', (e) => {
+        if(e.key === 'Enter') loginBtn.click();
     });
 }
 
