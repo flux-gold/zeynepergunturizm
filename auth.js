@@ -1,10 +1,20 @@
-// Basit şifreli giriş
 import { loadData } from './storage.js';
 
 function login(password) {
-    const settings = loadData('settings') || {};
-    const correctPassword = settings.adminPassword || "1234";
+    const settings = loadData('settings');
+
+    // Eğer settings yoksa varsayılan şifre
+    const correctPassword = settings?.adminPassword || "1234";
+
     return password === correctPassword;
 }
 
-export { login };
+function logout() {
+    localStorage.removeItem('loggedIn');
+}
+
+function isLoggedIn() {
+    return localStorage.getItem('loggedIn') === "true";
+}
+
+export { login, logout, isLoggedIn };
