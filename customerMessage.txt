@@ -1,0 +1,7 @@
+Merhaba {{name}}, 
+Transferiniz onaylandı:
+Başlangıç: {{start}}
+Varış: {{end}}
+Saat: {{time}}
+Kişi: {{passengers}}
+Teşekkür ederiz.

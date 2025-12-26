@@ -1,0 +1,15 @@
+{
+    "adminPassword": "1234",
+    "whatsappNumber": "0542123970",
+    "currencies": ["TL","EUR","USD","GBP","JPY"],
+    "colors": {
+        "primary": "#002147",
+        "accent": "#BFA12B",
+        "background": "#FFFFFF",
+        "hover": "#003366",
+        "riskOk": "#28A745",
+        "riskWarn": "#FFAA1C",
+        "riskCritical": "#D32F2F"
+    },
+    "startLocations": ["Karaman Merkez"]
+}

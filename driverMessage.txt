@@ -1,0 +1,7 @@
+Merhaba {{driverName}},
+Yeni transfer bilgileri:
+Başlangıç: {{start}}
+Varış: {{end}}
+Saat: {{time}}
+Kişi: {{passengers}}
+Araç: {{vehicleName}}

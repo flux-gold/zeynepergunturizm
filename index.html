@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zeynep Ergun Turizm</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div id="app">
+    <!-- Giriş Ekranı -->
+    <div id="login-screen">
+        <h1>Giriş Yap</h1>
+        <input type="password" id="password" placeholder="Şifre">
+        <button id="login-btn">Giriş</button>
+        <p id="login-error" class="hidden">Hatalı şifre!</p>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="hidden">
+        <header>
+            <h1>Zeynep Ergun Turizm</h1>
+        </header>
+        <main>
+            <nav>
+                <button id="btn-settings">Ayarlar</button>
+                <button id="btn-drivers">Şoförler</button>
+                <button id="btn-vehicles">Araçlar</button>
+                <button id="btn-transfers">Transferler</button>
+                <button id="btn-map">Rota Görünümü</button>
+                <button id="btn-reports">Gün Sonu Rapor</button>
+            </nav>
+            <div id="main-content">
+                <!-- Dinamik içerik buraya gelecek -->
+            </div>
+        </main>
+    </div>
+</div>
+<script src="assets/js/core/helpers.js"></script>
+<script src="assets/js/core/auth.js"></script>
+<script src="assets/js/core/storage.js"></script>
+<script src="assets/js/ui/login.js"></script>
+<script src="assets/js/ui/dashboard.js"></script>
+<script src="assets/js/ui/components.js"></script>
+<script src="assets/js/ui/settings.js"></script>
+<script src="assets/js/logic/driver.js"></script>
+<script src="assets/js/logic/vehicle.js"></script>
+<script src="assets/js/logic/group.js"></script>
+<script src="assets/js/logic/transfer.js"></script>
+<script src="assets/js/logic/calc.js"></script>
+<script src="assets/js/logic/validation.js"></script>
+<script src="assets/js/logic/map.js"></script>
+<script src="assets/js/logic/whatsapp.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
